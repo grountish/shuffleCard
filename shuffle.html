@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        section {
+            background-color: #111111;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .card {
+            border: 1px solid white;
+            height: 80%;
+            width: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #111111;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            transition: all 1s;
+            text-align: center;
+        }
+
+        .card-1 {
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .card-2 {
+            transform: translate(-40%, -50%) scale(.9);
+            opacity: .6;
+            padding: 2em;
+        }
+
+        .card-1 img {
+            width: 50%;
+            padding: 2em;
+        }
+
+        hr {
+            transform: rotate(-8deg);
+        }
+
+        .text-container {
+            width: 50%;
+            text-align: center;
+            
+            margin: 2em;
+        }
+        
+        button {
+
+            border-radius: 20px;
+            font-size: 20px;
+            padding: .5em .9em;
+            margin: 1em;
+        }
+
+        .button-1 {
+            border: 1px solid red;
+            color: red;
+            background-color: transparent;
+        }
+
+        .button-2 {
+
+             
+            background-color: red;
+            border: none;
+        }
+
+        h3 {
+            color: red;
+            font-size: 25px; 
+            text-align: center;
+        }
+        .numbers-container{
+            display: flex;
+            color:white;
+            font-size: 25px;
+            justify-content: space-around;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="card card-1">
+            <img src="ess.png" alt="">
+            <hr color="white" width="100%">
+            <div class="text-container">
+                <h3>Slashing the Public Sector</h3>
+                <p>This means reducing the share of the budget available to employ essential teachers, public service
+                    workers and frontline health staff like Trish.</p>
+                <button class="button-1" onclick="shuffle()">Shuffle</button>
+            </div>
+        </div>
+        <div class="card card-2">
+
+            <h3>Zimbabwe is not the only country to face these conditions</h3>
+            <p>Guess how many countries the IMF pushed to cut or freeze public employment funding in the lead up to the pandemic?</p>
+          
+                <div class="numbers-container">
+                    <h5>231</h5>
+                    <h5>423</h5>
+                    <h5>233</h5>
+                </div>
+                <div>
+
+                    <button class="button-2">Submit</button>
+                    <h2>skip</h2>
+                </div>
+           
+        </div>
+    </section>
+    <script>
+        const card2 = document.querySelector('.card-2')
+        const card1 = document.querySelector('.card-1')
+        const shuffle = () => {
+            console.log("object")
+            card1.style.transform = "translate(-200%, -50%)"
+            card2.style.transform = "translate(-50%, -50%) scale(1)"
+            card2.style.opacity = "1"
+        };
+    </script>
+</body>
+
+</html>
